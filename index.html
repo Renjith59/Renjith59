@@ -24,20 +24,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+    <script src="https://experiontechptrsd.d1.sc.omtrdc.net/b/ss/experiontechptrsdmobileanalytics/1/JS-2.26.0/s23418346321410?..." type="image/gif"></script>
+
   <script type="text/javascript" src="assets/js/AppMeasurement.js"></script>
-  <script type="text/javascript">
 
-     var s_account = "experiontechptrsdmobileanalytics";
-     var s = new AppMeasurement();
-    s.account = s_account; // Replace with your actual report suite ID
-    s.trackingServer = "experiontechptrsd.d1.sc.omtrdc.net";
+  <script>
+    var script = document.createElement('script');
+    script.src = 'https://experiontechptrsd.d1.sc.omtrdc.net/b/ss/experiontechptrsdmobileanalytics/1/JS-2.26.0/s23418346321410';
+    script.type = 'application/javascript';
+    script.onload = function() {
+        console.log('AppMeasurement script loaded successfully');
+        var s_account = "experiontechptrsdmobileanalytics";
+        var s = s_gi(s_account);
+        s.account = s_account;
+        s.trackingServer = "experiontechptrsd.d1.sc.omtrdc.net";
 
-    s.pageName = "My Page";
-    s.channel = "WebView Channel";
-    s.prop1 = "prop1 value";
-    s.eVar1 = "eVar1 value";
+        // Example configuration
+        s.pageName = "My Page";
+        s.channel = "WebView Channel";
+        s.prop1 = "prop1 value";
+        s.eVar1 = "eVar1 value";
 
-    s.track();  // Send the tracking call
+        // Send a page view
+        s.t();
+    };
+    script.onerror = function() {
+        console.error('Failed to load AppMeasurement script');
+    };
+    document.head.appendChild(script);
 </script>
 
 </head>
