@@ -24,6 +24,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <script type="text/javascript" src="assets/js/AppMeasurement.js"></script>
+  <script type="text/javascript">
+
+     var s_account = "experiontechptrsdmobileanalytics";
+     var s = new AppMeasurement();
+    s.account = s_account; // Replace with your actual report suite ID
+    s.trackingServer = "experiontechptrsd.d1.sc.omtrdc.net";
+
+    s.pageName = "My Page";
+    s.channel = "WebView Channel";
+    s.prop1 = "prop1 value";
+    s.eVar1 = "eVar1 value";
+
+    s.track();  // Send the tracking call
+</script>
 
 </head>
 
@@ -3590,6 +3605,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 
